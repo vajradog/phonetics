@@ -1,6 +1,6 @@
 <article class="post">
   <header>
-    <h2 class="headline"><a href="show.html"><%= @phonetic.word %> in the following formats: </a></h2>
+    <h2 class="headline"><a href="show.html">"<%= @phonetic.word %>" in the following formats: </a></h2>
   </header>
   <hr>
   <p class="meta"><strong><%= @phonetic.word %></strong> in NATO phonetics (most popular)</p>
@@ -29,7 +29,7 @@
   <hr>
   <p class="meta"><strong><%= @phonetic.word %></strong> in Morse code:</p>
   <section id="post-body">
-    <p><%= convert_morse %></p>
+    <h4><%= convert_morse %></ph4>
   </section>
 
 <hr>
