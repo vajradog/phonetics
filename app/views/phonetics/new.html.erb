@@ -4,8 +4,8 @@
   </header>
   <div align="center">
     <%= form_for @phonetic do |f| %>
-      <%= f.text_field :word, size: "59" %> <br><br>
-      <%= f.submit "Submit" %>
+      <%= f.text_field :word, placeholder: "enter text here" %><br><br>
+    <%= f.submit "Submit" %>
     <% end %>
   </div>
 </article>

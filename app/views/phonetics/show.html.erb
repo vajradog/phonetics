@@ -32,8 +32,9 @@
   </section>
 
 <hr>
+<h2 class="headline">Try another word</h2>
   <%= form_for @phonetic do |f| %>
-    <%= f.text_field :word, size: "59" %> <br><br>
-    <%= f.submit "Submit" %>
+    <%= f.text_field :word %> <br><br>
+    <%= f.submit "Update word" %>
   <% end %>
 </article>
