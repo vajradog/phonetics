@@ -1,1 +1,1 @@
-This is a very quick and rough implementation I created for a friend to convert words into phonetics so the customer service doesn't get your name spellings wrong. Needs a lot of clean up but it works as it is.
+This is a very quick and rough implementation I created for a friend to convert words into phonetics so the customer service doesn't get your name spellings wrong. Needs a lot of clean up but it works as it is: https://spellit.herokuapp.com/
