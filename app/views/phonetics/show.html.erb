@@ -1,33 +1,32 @@
 <article class="post">
   <header>
-    <h2 class="headline"><a href="show.html">"<%= @phonetic.word %>" in the following formats: </a></h2>
+    <h2 class="headline">"<%= @phonetic.word %>" in the following formats:</h2>
   </header>
   <hr>
-  <p class="meta"><strong><%= @phonetic.word %></strong> in NATO phonetics (most popular)</p>
+  <h4>NATO phonetics (most popular)</h4>
   <section id="post-body">
     <p><%= convert_nato %></p>
-  </section>
 
   <hr>
-  <p class="meta"><strong><%= @phonetic.word %></strong> in Italian phonetics</p>
+ <h4>Italian phonetics</h4>
   <section id="post-body">
     <p><%= convert_italian %></p>
   </section>
 
   <hr>
-  <p class="meta"><strong><%= @phonetic.word %></strong> in English phonetics:</p>
+  <h4>English phonetics</h4>
   <section id="post-body">
     <p><%= convert_english %></p>
   </section>
 
   <hr>
-  <p class="meta"><strong><%= @phonetic.word %></strong> in German phonetics:</p>
+ <h4>German phonetics</h4>
   <section id="post-body">
     <p><%= convert_german %></p>
   </section>
 
   <hr>
-  <p class="meta"><strong><%= @phonetic.word %></strong> in Morse code:</p>
+  <h4>Morse Code</h4>
   <section id="post-body">
     <h4><%= convert_morse %></ph4>
   </section>
