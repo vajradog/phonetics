@@ -1,0 +1,40 @@
+<article class="post">
+  <header>
+    <h2 class="headline"><a href="show.html"><%= @phonetic.word %> in the following formats: </a></h2>
+  </header>
+  <hr>
+  <p class="meta"><strong><%= @phonetic.word %></strong> in NATO phonetics (most popular)</p>
+  <section id="post-body">
+    <p><%= convert_nato %></p>
+  </section>
+
+  <hr>
+  <p class="meta"><strong><%= @phonetic.word %></strong> in Italian phonetics</p>
+  <section id="post-body">
+    <p><%= convert_italian %></p>
+  </section>
+
+  <hr>
+  <p class="meta"><strong><%= @phonetic.word %></strong> in English phonetics:</p>
+  <section id="post-body">
+    <p><%= convert_english %></p>
+  </section>
+
+  <hr>
+  <p class="meta"><strong><%= @phonetic.word %></strong> in German phonetics:</p>
+  <section id="post-body">
+    <p><%= convert_german %></p>
+  </section>
+
+  <hr>
+  <p class="meta"><strong><%= @phonetic.word %></strong> in Morse code:</p>
+  <section id="post-body">
+    <p><%= convert_morse %></p>
+  </section>
+
+<hr>
+  <%= form_for @phonetic do |f| %>
+    <%= f.text_field :word, size: "59" %> <br><br>
+    <%= f.submit "Submit" %>
+  <% end %>
+</article>

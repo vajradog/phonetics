@@ -1,0 +1,18 @@
+<article class="post">
+  <header>
+    <h2 class="headline">Enter your name or some words below</h2>
+  </header>
+  <div align="center">
+    <%= form_for @phonetic do |f| %>
+      <%= f.text_field :word, size: "59" %> <br><br>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+</article>
+
+<h2>The text will be converted to NATO phonetics, English phonetics, Italian phonetics and Morse code. </h2>
+
+
+
+
+
