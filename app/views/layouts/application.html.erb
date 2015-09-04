@@ -1,22 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE HTML>
 
-  <title>Phonetics</title>
-  <%= stylesheet_link_tag    'style.css', media: 'all' %>
-  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-</head>
-<body>
+<html>
+  <head>
+    <title>SpellIt</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-  <section id="wrapper" class="group">
-    <%= yield %>
+    <section id="header">
+        <header>
+          <span class="image avatar"><%= image_tag("avatar")%></span>
+          <h1 id="logo"><a href="#">vajradog</a></h1>
+          <p>Your question: ...<br />
+          My answer: It depends</p>
+        </header>
+        <nav id="nav">
+          <ul>
+            <li><a href="http://github.com/vajradog">Github</a></li>
+            <li><a href="http://endless.horse/">Endless Horse</a></li>
+          </ul>
+        </nav>
+      </section>
 
-    <footer id="post-meta" class="clearfix">
-      <div><span>created with <3 by</span> <a href="http://github.com/vajradog">@vajradog</a></div>
-    </footer>
-  </section>
-</body>
+<%= yield %>
+  <%= render 'layouts/footer' %>
+  </body>
 </html>
+

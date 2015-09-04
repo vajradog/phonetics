@@ -1,18 +1,27 @@
-<article class="post">
-  <header>
-    <h2 class="headline">Enter your name or some words below</h2>
-  </header>
-  <div align="center">
-    <%= form_for @phonetic do |f| %>
-      <%= f.text_field :word, placeholder: "enter text here" %><br><br>
-    <%= f.submit "Submit" %>
-    <% end %>
+<div id="wrapper">
+  <div id="main">
+    <!-- One -->
+    <section id="one">
+      <div class="container">
+        <header class="major">
+          <h2>Spell <em>It</em></h2>
+          <p>Created by a guy whose name the customer<br />
+          service rep. often spelled wrong.</p>
+        </header>
+
+      <%= form_for @phonetic do |f| %>
+        <div class="row">
+          <div class="6u 12u(xsmall)">
+            <%= f.text_field :word,placeholder: "Enter text here" %> <br>
+          </div>
+          <div class="row uniform">
+            <div class="12u">
+                <%= f.submit "Go", class: "special" %>
+              <% end %>
+            </div>
+          </div>
+          <p>Your text will be converted to NATO, English, Italian phonetics and Morse code.</p>
+      </div>
+    </section>
   </div>
-</article>
-
-<h2>The text will be converted to NATO phonetics, English phonetics, Italian phonetics and Morse code. </h2>
-
-
-
-
-
+</div>

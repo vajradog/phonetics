@@ -1,40 +1,59 @@
-<article class="post">
-  <header>
-    <h2 class="headline">"<%= @phonetic.word %>" in the following formats:</h2>
-  </header>
-  <hr>
-  <h4>NATO phonetics (most popular)</h4>
-  <section id="post-body">
-    <p><%= convert_nato %></p>
+<div id="wrapper">
+  <div id="main">
+    <section id="one">
+      <div class="container">
+        <header class="major">
+          <h2><%= @phonetic.word %></h2>
+        </header>
+      </div>
+    </section>
 
-  <hr>
- <h4>Italian phonetics</h4>
-  <section id="post-body">
-    <p><%= convert_italian %></p>
-  </section>
+    <section>
+      <div class="container">
+        <h3>NATO</h3>
+        <p><%= convert_nato %></p>
+      </div>
+    </section>
 
-  <hr>
-  <h4>English phonetics</h4>
-  <section id="post-body">
-    <p><%= convert_english %></p>
-  </section>
+    <section>
+      <div class="container">
+        <h3>Italian</h3>
+        <p><%= convert_italian %></p>
+      </div>
+    </section>
 
-  <hr>
- <h4>German phonetics</h4>
-  <section id="post-body">
-    <p><%= convert_german %></p>
-  </section>
+    <section>
+      <div class="container">
+        <h3>German</h3>
+        <p><%= convert_german %></p>
+      </div>
+    </section>
 
-  <hr>
-  <h4>Morse Code</h4>
-  <section id="post-body">
-    <h4><%= convert_morse %></ph4>
-  </section>
+    <section>
+      <div class="container">
+        <h3>Morse Code</h3>
+        <p><%= convert_morse %></p>
+      </div>
+    </section>
 
-<hr>
-<h2 class="headline">Try another word</h2>
-  <%= form_for @phonetic do |f| %>
-    <%= f.text_field :word %> <br><br>
-    <%= f.submit "Update word" %>
-  <% end %>
-</article>
+
+     <section id="one">
+      <div class="container">
+      <%= form_for @phonetic do |f| %>
+        <div class="row">
+          <div class="6u 12u(xsmall)">
+            <%= f.text_field :word, placeholder: "Try another word" %> <br>
+          </div>
+          <div class="row uniform">
+            <div class="12u">
+                <%= f.submit "Go", class: "special" %>
+              <% end %>
+            </div>
+          </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+

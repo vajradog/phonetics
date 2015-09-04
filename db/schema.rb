@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150623173418) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "phonetics", force: :cascade do |t|
     t.string   "word"
     t.datetime "created_at"
