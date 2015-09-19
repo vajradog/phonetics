@@ -1,12 +1,11 @@
 class PhoneticsController < ApplicationController
+  before_filter :set_phonetic, only: [:show, :edit, :update]
 
   def new
     @phonetic = Phonetic.new
   end
 
-  def show
-    @phonetic = Phonetic.find(params[:id])
-  end
+  def show; end
 
   def create
     @phonetic = Phonetic.new(phonetic_params)
@@ -20,7 +19,6 @@ class PhoneticsController < ApplicationController
   end
 
   def update
-    @phonetic = Phonetic.find(params[:id])
     if @phonetic.update(phonetic_params)
       flash[:notice] = "Got it, working on it"
       redirect_to @phonetic
@@ -31,6 +29,10 @@ class PhoneticsController < ApplicationController
   end
 
   private
+
+  def set_phonetic
+    @phonetic = Phonetic.find_by_slug!(params[:id])
+  end
 
   def phonetic_params
     params.require(:phonetic).permit(:word)

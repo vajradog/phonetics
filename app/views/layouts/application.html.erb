@@ -10,24 +10,13 @@
   <%= csrf_meta_tags %>
   </head>
   <body>
-
-    <section id="header">
-        <header>
-          <span class="image avatar"><%= image_tag("avatar")%></span>
-          <h1 id="logo"><a href="http://github.com/vajradog">vajradog</a></h1>
-          <p>Your question: ...<br />
-          My answer: It depends</p>
-        </header>
-        <nav id="nav">
-          <ul>
-            <li><a href="http://github.com/vajradog">Github</a></li>
-            <li><a href="http://endless.horse/">Endless Horse</a></li>
-          </ul>
-        </nav>
-      </section>
-
-<%= yield %>
-  <%= render 'layouts/footer' %>
+    <% cache do %>
+      <%= render 'layouts/header' %>
+    <% end %>
+    <%= yield %>
+    <% cache do %>
+      <%= render 'layouts/footer' %>
+    <% end %>
   </body>
 </html>
 

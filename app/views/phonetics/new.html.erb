@@ -3,11 +3,13 @@
     <!-- One -->
     <section id="one">
       <div class="container">
-        <header class="major">
-          <h2>Spell <em>It</em></h2>
-          <p>Created by a guy whose name the customer<br />
-          service rep. often spelled wrong.</p>
-        </header>
+        <% cache do %>
+          <header class="major">
+            <h2>Spell <em>It</em></h2>
+            <p>Created by a guy whose name the customer<br />
+            service rep. often spelled wrong.</p>
+          </header>
+        <% end %>
 
       <%= form_for @phonetic do |f| %>
         <div class="row">
@@ -15,8 +17,9 @@
             <%= f.text_field :word,placeholder: "Enter text here" %> <br>
           </div>
           <div class="row uniform">
-            <div class="12u">
-                <%= f.submit "Go", class: "special" %>
+            <div >
+                <%= f.submit "Go", class: "special", style: "
+    width: 60px;" %>
               <% end %>
             </div>
           </div>
